@@ -1,0 +1,15 @@
+.weird1{
+    animation: spinn linear 2s infinite forwards;
+    width : 30px;
+}
+
+.weird2{
+    animation: spinn linear 2s infinite backwards;
+    width : 30px;
+}
+
+@keyframes spinn {
+    from {  transform : rotate(0deg);
+    translate: (20px);}
+    to {transform : rotate(360deg) ;}
+}
