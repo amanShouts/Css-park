@@ -111,7 +111,7 @@ export function Csspark() {
         <div>
             <div className="flex bg-blue-100 h-[90vh] p-2">
                 <div className="w-[53%] bg-white-600 h-5/6 px-10 py-5 border-dotted">
-                    <textarea className="w-full h-96 resize-none p-2"
+                    <textarea className="w-full h-[65vh] resize-none p-2 "
                         value={cssText}
                         onChange={(e) => setCss(e.target.value)}
                         placeholder="Write css here like you normally would :)">
