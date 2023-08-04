@@ -18,10 +18,6 @@ export function Csspark() {
     const buttonRef = useRef(null)
 
     function applyCss() {
-        // we have all classes names in the input boxes 
-        // and we have main css from textarea
-        // console.log(divClass, buttonClass, imageClass, inputClass)
-        // console.log("the actual css -> ", cssText)
 
         let obj = css.parse(cssText)
 
@@ -43,7 +39,6 @@ export function Csspark() {
 
                 // allcss += addAnimationDelay() + " ;"
                 let div = tempRef.current
-                // console.log("inside div- ", div, allcss)
                 div.style = allcss
             }
         }
@@ -59,19 +54,15 @@ export function Csspark() {
 
     function parseTheCss(obj) {
         let rules = obj.stylesheet.rules
-        // console.log("rule", rules)
         let answerObj = {}
 
         for (let element of rules) {
-            // console.log(element, " ele")
             let classnameArr = element.selectors
-            // console.log(classnameArr)
             let classname = classnameArr[0].trim()
             let cssSyntax = element.declarations
             answerObj[classname] = []
 
             for (let syn of cssSyntax) {
-                // console.log(syn, " --syn")
                 let syntax = syn.property + ":" + syn.value + ";"
                 answerObj[classname].push(syntax)
             }
@@ -102,7 +93,6 @@ export function Csspark() {
     }
 
     function resetAll(event) {
-        console.log(event.target.value)
         if (event.target.checked == true) {
             inputRef.current.style = ""
             imgRef.current.style = ""
